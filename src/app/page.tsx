@@ -275,8 +275,8 @@ export default function ArizonaWomensConferencePage() {
       {/* Sponsors Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm uppercase tracking-widest text-[#666] text-center mb-8">Proudly Sponsored By</p>
-          <div className="flex flex-wrap justify-center items-center gap-12">
+          <p className="text-sm uppercase tracking-widest text-[#666] text-center mb-10">Proudly Sponsored By</p>
+          <div className="flex flex-wrap justify-center items-center gap-16">
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -286,21 +286,17 @@ export default function ArizonaWomensConferencePage() {
                 style={{ height: '50px' }}
               />
             </div>
-            {/* Placeholder for future sponsors */}
-            <div className="text-center opacity-40">
-              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Partner</p>
-              <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
-                Your Logo Here
-              </div>
-            </div>
-            <div className="text-center opacity-40">
-              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Partner</p>
-              <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
-                Your Logo Here
-              </div>
+            <div className="text-center">
+              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/adrata-logo.png"
+                alt="Adrata"
+                style={{ height: '45px' }}
+              />
             </div>
           </div>
-          <p className="text-center text-sm text-[#999] mt-8">
+          <p className="text-center text-sm text-[#999] mt-10">
             Interested in sponsoring? <a href="mailto:hello@azwomensconference.com" className="text-[#E91E8C] hover:underline">Contact us</a>
           </p>
         </div>

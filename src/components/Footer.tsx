@@ -17,13 +17,21 @@ export default function Footer() {
               for a transformative day of inspiration, education, and connection.
             </p>
             <div className="pt-4 border-t border-white/10">
-              <p className="text-white/40 text-xs uppercase tracking-wide mb-2">Title Sponsor</p>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-                alt="DO THE DAMN THING"
-                style={{ height: '30px', opacity: 0.7 }}
-              />
+              <p className="text-white/40 text-xs uppercase tracking-wide mb-3">Sponsors</p>
+              <div className="flex items-center gap-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                  alt="DO THE DAMN THING"
+                  style={{ height: '24px', opacity: 0.7 }}
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/adrata-logo.png"
+                  alt="Adrata"
+                  style={{ height: '24px', opacity: 0.7 }}
+                />
+              </div>
             </div>
           </div>
 
