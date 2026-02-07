@@ -19,19 +19,23 @@ export default function Footer() {
             <div className="pt-4 border-t border-white/10">
               <p className="text-white/40 text-xs uppercase tracking-wide mb-3">Sponsors</p>
               <div className="flex items-center gap-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-                  alt="DO THE DAMN THING"
-                  style={{ height: '24px', opacity: 0.7 }}
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/adrata-logo.svg"
-                  alt="Adrata"
-                  style={{ height: '22px', opacity: 0.8 }}
-                  className="brightness-0 invert"
-                />
+                <a href="https://dotheblankthing.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                    alt="DO THE DAMN THING"
+                    style={{ height: '24px', opacity: 0.7 }}
+                  />
+                </a>
+                <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/adrata-logo.svg"
+                    alt="Adrata"
+                    style={{ height: '22px', opacity: 0.8 }}
+                    className="brightness-0 invert"
+                  />
+                </a>
               </div>
             </div>
           </div>
