@@ -276,7 +276,7 @@ export default function ArizonaWomensConferencePage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm uppercase tracking-widest text-[#666] text-center mb-10">Proudly Sponsored By</p>
-          <div className="flex flex-wrap justify-center items-center gap-16">
+          <div className="flex flex-col items-center gap-10">
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
               <a href="https://dotheblankthing.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity inline-block">
