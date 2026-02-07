@@ -27,9 +27,10 @@ export default function Footer() {
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/adrata-logo.png"
+                  src="/adrata-logo.svg"
                   alt="Adrata"
-                  style={{ height: '24px', opacity: 0.7 }}
+                  style={{ height: '22px', opacity: 0.8 }}
+                  className="brightness-0 invert"
                 />
               </div>
             </div>

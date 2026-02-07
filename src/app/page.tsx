@@ -290,9 +290,9 @@ export default function ArizonaWomensConferencePage() {
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/adrata-logo.png"
+                src="/adrata-logo.svg"
                 alt="Adrata"
-                style={{ height: '45px' }}
+                style={{ height: '40px' }}
               />
             </div>
           </div>
