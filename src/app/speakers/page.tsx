@@ -96,7 +96,7 @@ export default function SpeakersPage() {
               <img
                 src={featuredSpeaker.image}
                 alt={featuredSpeaker.name}
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl"
+                className="w-64 h-64 md:w-80 md:h-80 rounded-3xl object-cover border-4 border-white shadow-2xl"
               />
               <div className="text-center md:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-2" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
@@ -131,7 +131,7 @@ export default function SpeakersPage() {
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  className="w-48 h-48 rounded-full object-cover mx-auto mb-6 shadow-lg"
+                  className="w-48 h-48 rounded-3xl object-cover mx-auto mb-6 shadow-lg"
                   style={{ filter: speaker.name.includes('Announced') ? 'grayscale(100%) opacity(0.5)' : 'none' }}
                 />
                 <p className="text-xs uppercase tracking-wide text-[#E91E8C] mb-2">{speaker.title}</p>

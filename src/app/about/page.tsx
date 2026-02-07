@@ -89,7 +89,7 @@ export default function AboutPage() {
               const Icon = value.icon
               return (
                 <div key={i} className="text-center p-8 rounded-lg" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#E91E8C]/20 flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#E91E8C]/20 flex items-center justify-center">
                     <Icon className="w-8 h-8 text-[#E91E8C]" />
                   </div>
                   <h3 className="text-xl font-bold text-white uppercase mb-4">{value.title}</h3>
