@@ -290,9 +290,10 @@ export default function ArizonaWomensConferencePage() {
             </div>
             <div className="text-center">
               <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
-              <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <a href="https://speedrun.adrata.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="6" fill="#2563eb"/>
+                  <path d="M8 16L16 8M16 8H10M16 8V14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span className="text-[#1a1a1a] text-xl font-normal">Adrata</span>
               </a>
