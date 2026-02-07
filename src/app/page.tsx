@@ -241,7 +241,7 @@ export default function ArizonaWomensConferencePage() {
               <img
                 src="https://dtdtnation.com/wp-content/uploads/2022/04/TiffanyL-LA-2018-1450.jpg"
                 alt="Tiffany Largie"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-3xl object-cover border-4 border-white shadow-xl mx-auto mb-4"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-xl mx-auto mb-4"
               />
               <h3 className="text-lg font-bold text-white uppercase">Tiffany Largie</h3>
               <p className="text-white/70 text-sm">Serial Entrepreneur</p>
@@ -251,7 +251,7 @@ export default function ArizonaWomensConferencePage() {
             {/* Coming Soon Speakers */}
             {[1, 2, 3].map((i) => (
               <div key={i} className="text-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white/20 mx-auto mb-4 flex items-center justify-center">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white/60 text-4xl">?</span>
                 </div>
                 <h3 className="text-lg font-bold text-white/60 uppercase">Coming Soon</h3>
