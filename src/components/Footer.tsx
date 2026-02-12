@@ -25,7 +25,6 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="block cursor-pointer hover:opacity-100 transition-opacity"
                   style={{ opacity: 0.7 }}
-                  onClick={() => window.open('https://dotheblankthing.com', '_blank')}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -40,7 +39,6 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 cursor-pointer hover:opacity-100 transition-opacity"
                   style={{ opacity: 0.7 }}
-                  onClick={() => window.open('https://speedrun.adrata.com', '_blank')}
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7H9M17 7V15" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
