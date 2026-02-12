@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { Sparkles, Users, Rocket, Calendar, Clock, MapPin, Ticket, Check, Quote } from 'lucide-react'
+import { Calendar, Clock, MapPin, Ticket, Check, Quote, DollarSign, Briefcase, Store, Heart, Crown, Handshake, BookOpen } from 'lucide-react'
 
 export default function ArizonaWomensConferencePage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' })
@@ -41,15 +41,14 @@ export default function ArizonaWomensConferencePage() {
     }
   }
 
-  const schedule = [
-    { time: '8:00 AM', event: 'Doors Open & Registration' },
-    { time: '9:00 AM', event: 'Opening Keynote: Tiffany Largie' },
-    { time: '10:30 AM', event: 'Panel: Building Your Empire' },
-    { time: '12:00 PM', event: 'Networking Lunch' },
-    { time: '1:30 PM', event: 'Breakout Sessions' },
-    { time: '3:00 PM', event: 'Workshop: Your Story, Your Power' },
-    { time: '4:30 PM', event: 'Closing Keynote & Celebration' },
-    { time: '5:00 PM', event: 'Event Concludes' },
+  const coverageAreas = [
+    { icon: DollarSign, title: 'Financial Literacy & Wealth Building' },
+    { icon: Briefcase, title: 'Career Advancement Workshops' },
+    { icon: Store, title: 'Entrepreneurship & Small Business Tracks' },
+    { icon: Heart, title: 'Mental Health & Burnout Recovery' },
+    { icon: Crown, title: 'Leadership Development' },
+    { icon: Handshake, title: 'Sponsor Marketplace & Activations' },
+    { icon: BookOpen, title: 'Community Connection Sessions' },
   ]
 
   return (
@@ -58,7 +57,6 @@ export default function ArizonaWomensConferencePage() {
 
       {/* Hero Section */}
       <section className="relative pt-20 min-h-screen flex items-center px-4 text-center overflow-hidden">
-        {/* Background Image Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -70,29 +68,24 @@ export default function ArizonaWomensConferencePage() {
 
         <div className="relative max-w-4xl mx-auto py-20">
           <p className="text-sm md:text-base uppercase tracking-widest text-[#E91E8C] mb-4">
-            May 2, 2026 • Phoenix, Arizona
+            May 2, 2026 &bull; Phoenix, Arizona
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
             Arizona Women&apos;s<br />Conference
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#E91E8C] italic mb-8">
-            Lead. Succeed. Thrive.
-          </p>
-
-          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-10">
-            Arizona&apos;s premier conference for women in business. Join 500+ ambitious women leaders, entrepreneurs,
-            and professionals for a full day of world-class speakers, actionable workshops, and powerful networking.
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10">
+            A statewide gathering of women leaders, professionals, founders, and builders.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#tickets" className="inline-block px-8 py-4 bg-[#E91E8C] text-white font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity">
-              Get Your Ticket
+            <a href="#interest" className="inline-block px-8 py-4 bg-[#E91E8C] text-white font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity">
+              Join the Interest List
             </a>
-            <Link href="/about" className="inline-block px-8 py-4 border-2 border-white/30 text-white font-bold text-sm uppercase tracking-wide rounded hover:border-white/60 transition-colors">
-              Learn More
-            </Link>
+            <a href="#sponsors" className="inline-block px-8 py-4 border-2 border-white/30 text-white font-bold text-sm uppercase tracking-wide rounded hover:border-white/60 transition-colors">
+              Become a Sponsor
+            </a>
           </div>
 
           {/* Stats */}
@@ -112,7 +105,6 @@ export default function ArizonaWomensConferencePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1.5 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
@@ -120,42 +112,102 @@ export default function ArizonaWomensConferencePage() {
         </div>
       </section>
 
-      {/* Why Attend */}
+      {/* Theme Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">The 2026 Theme</p>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#1a1a1a] uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+            MORE
+          </h2>
+          <p className="text-xl md:text-2xl text-[#E91E8C] italic mb-10">
+            Because success isn&apos;t always the same as fulfillment.
+          </p>
+
+          <div className="max-w-3xl mx-auto text-left space-y-6 text-[#333] text-base md:text-lg leading-relaxed">
+            <p>
+              The Arizona Women&apos;s Conference was created to bring together women across industries, careers, and life stages for one purpose: <strong>connection, advancement, and opportunity.</strong>
+            </p>
+            <p>
+              This is not a single-industry event and not a networking mixer. It is a professional and personal development conference designed to support women as leaders in business, community, education, and family life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Attendees Section */}
+      <section className="py-20 px-4" style={{ backgroundColor: '#1a1a1a' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Who Attends</p>
+              <h2 className="text-3xl font-bold text-white uppercase mb-8" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+                Women From Every Industry
+              </h2>
+              <ul className="space-y-4">
+                {[
+                  'Entrepreneurs',
+                  'Corporate Professionals',
+                  'Educators',
+                  'Healthcare Leaders',
+                  'Creatives',
+                  'Public Sector Leaders',
+                  'Women Re-entering the Workforce'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Check className="w-6 h-6 text-[#E91E8C] flex-shrink-0" />
+                    <span className="text-white/80 text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="text-center">
+              <p className="text-white/60 text-lg leading-relaxed">
+                This conference exists to strengthen the economic and social influence of women across Arizona.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Cover Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Why Attend</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] uppercase" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-              A Day That Will Change Everything
+            <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">What We Cover</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+              A Day of Impact
             </h2>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+              <div className="flex items-center gap-3 justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#E91E8C]/10 flex items-center justify-center">
+                  <span className="text-[#E91E8C] text-lg font-bold">&#9733;</span>
+                </div>
+                <span className="text-[#1a1a1a] font-bold text-lg">Keynote Speakers</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#E91E8C]/10 flex items-center justify-center">
+                  <span className="text-[#E91E8C] text-lg font-bold">&#9733;</span>
+                </div>
+                <span className="text-[#1a1a1a] font-bold text-lg">Breakout Learning Sessions</span>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Sparkles,
-                title: 'Get Inspired',
-                description: 'Hear from successful women entrepreneurs and industry leaders who have walked the path you\'re on.'
-              },
-              {
-                icon: Users,
-                title: 'Build Connections',
-                description: 'Network with hundreds of ambitious, like-minded women who will become your support system.'
-              },
-              {
-                icon: Rocket,
-                title: 'Take Action',
-                description: 'Leave with actionable strategies and a clear roadmap to achieve your business goals.'
-              }
-            ].map((item, i) => {
-              const Icon = item.icon
+          {/* Coverage Area Tiles */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coverageAreas.map((area, i) => {
+              const Icon = area.icon
               return (
-                <div key={i} className="text-center p-8">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#E91E8C]/10 flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-[#E91E8C]" />
+                <div
+                  key={i}
+                  className="p-6 rounded-xl text-center border-2 border-[#f0f0f0] hover:border-[#E91E8C] hover:shadow-lg transition-all"
+                  style={{ backgroundColor: '#fafafa' }}
+                >
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#E91E8C]/10 flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-[#E91E8C]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1a1a1a] uppercase mb-4">{item.title}</h3>
-                  <p className="text-[#666]">{item.description}</p>
+                  <h3 className="text-base font-bold text-[#1a1a1a] uppercase">{area.title}</h3>
                 </div>
               )
             })}
@@ -163,98 +215,41 @@ export default function ArizonaWomensConferencePage() {
         </div>
       </section>
 
-      {/* Event Details */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#1a1a1a' }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Event Details</p>
-              <h2 className="text-3xl font-bold text-white uppercase mb-8" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-                Mark Your Calendar
-              </h2>
-              <div className="space-y-6">
-                {[
-                  { icon: Calendar, label: 'Date', value: 'Saturday, May 2, 2026' },
-                  { icon: Clock, label: 'Time', value: '9:00 AM - 5:00 PM' },
-                  { icon: MapPin, label: 'Location', value: 'Phoenix, AZ' },
-                  { icon: Ticket, label: 'Tickets', value: 'Starting at $197' }
-                ].map((item, i) => {
-                  const Icon = item.icon
-                  return (
-                    <div key={i} className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-[#E91E8C]/20 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-[#E91E8C]" />
-                      </div>
-                      <div>
-                        <p className="text-white/60 text-sm">{item.label}</p>
-                        <p className="text-white font-medium">{item.value}</p>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">What to Expect</p>
-              <h2 className="text-3xl font-bold text-white uppercase mb-8" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-                An Unforgettable Experience
-              </h2>
-              <ul className="space-y-4">
-                {[
-                  'Powerful keynotes from industry leaders',
-                  'Interactive workshops and breakout sessions',
-                  'Networking with ambitious women entrepreneurs',
-                  'Actionable strategies you can implement immediately',
-                  'Exclusive resources and materials',
-                  'Lunch and refreshments included'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-[#E91E8C] flex-shrink-0 mt-0.5" />
-                    <span className="text-white/80">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Speakers Section */}
       <section className="py-20 px-4" style={{ backgroundColor: '#E91E8C' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <p className="text-white/80 text-sm uppercase tracking-widest mb-4">2026 Speaker Lineup</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-              World-Class Speakers
+            <h2 className="text-3xl md:text-5xl font-bold text-white uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+              Speakers
             </h2>
-            <p className="text-white/70 mt-4 max-w-2xl mx-auto">
-              Learn from industry leaders, successful entrepreneurs, and experts who will share actionable insights to accelerate your success.
+            <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed">
+              Our speakers include national voices and Arizona leaders selected for practical experience, not just inspiration. Every session is designed to provide actionable takeaways attendees can apply immediately.
             </p>
           </div>
 
-          {/* Speaker Grid */}
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            {/* Tiffany - First Announced */}
+          {/* Speaker Grid - Larger Photos */}
+          <div className="grid md:grid-cols-4 gap-10 mb-12">
+            {/* Tiffany Largie */}
             <div className="text-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://dtdtnation.com/wp-content/uploads/2022/04/TiffanyL-LA-2018-1450.jpg"
                 alt="Tiffany Largie"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-xl mx-auto mb-4"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl mx-auto mb-5"
               />
-              <h3 className="text-lg font-bold text-white uppercase">Tiffany Largie</h3>
-              <p className="text-white/70 text-sm">Serial Entrepreneur</p>
-              <p className="text-white/50 text-xs mt-1">Keynote Speaker</p>
+              <h3 className="text-xl font-bold text-white uppercase">Tiffany Largie</h3>
+              <p className="text-white/80 text-sm font-medium">Serial Entrepreneur</p>
+              <p className="text-white/60 text-xs mt-1 uppercase tracking-wide">Keynote Speaker</p>
             </div>
 
             {/* Coming Soon Speakers */}
             {[1, 2, 3].map((i) => (
               <div key={i} className="text-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/20 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white/60 text-4xl">?</span>
+                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-white/20 mx-auto mb-5 flex items-center justify-center">
+                  <span className="text-white/60 text-5xl">?</span>
                 </div>
-                <h3 className="text-lg font-bold text-white/60 uppercase">Coming Soon</h3>
+                <h3 className="text-xl font-bold text-white/60 uppercase">Coming Soon</h3>
                 <p className="text-white/40 text-sm">Speaker Announcement</p>
               </div>
             ))}
@@ -262,124 +257,138 @@ export default function ArizonaWomensConferencePage() {
 
           <div className="text-center">
             <p className="text-white/70 mb-6">More speakers to be announced. Follow us for updates!</p>
-            <Link
-              href="/speakers"
-              className="inline-block px-6 py-3 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
-            >
-              View All Speakers
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Sponsors Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm uppercase tracking-widest text-[#666] text-center mb-10">Proudly Sponsored By</p>
-          <div className="flex flex-col items-center gap-10">
-            <div className="text-center">
-              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Title Sponsor</p>
-              <a
-                href="https://dotheblankthing.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block cursor-pointer hover:opacity-80 transition-opacity"
-                onClick={() => window.open('https://dotheblankthing.com', '_blank')}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/speakers"
+                className="inline-block px-6 py-3 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
-                  alt="DO THE DAMN THING"
-                  style={{ height: '50px' }}
-                />
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-xs uppercase tracking-wide text-[#999] mb-3">Platinum Sponsor</p>
+                View All Speakers
+              </Link>
               <a
-                href="https://speedrun.adrata.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity"
-                onClick={() => window.open('https://speedrun.adrata.com', '_blank')}
+                href="mailto:hello@azwomensconference.com?subject=Speaker%20Nomination"
+                className="inline-block px-6 py-3 border-2 border-white text-white font-bold text-sm uppercase tracking-wide rounded hover:bg-white/10 transition-colors"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <span className="text-[#1a1a1a] text-lg">Adrata</span>
+                Nominate a Speaker
               </a>
             </div>
           </div>
-          <p className="text-center text-sm text-[#999] mt-10">
-            Interested in sponsoring? <a href="mailto:hello@azwomensconference.com" className="text-[#E91E8C] hover:underline">Contact us</a>
-          </p>
         </div>
       </section>
 
-      {/* Schedule Preview */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#101010' }}>
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Event Schedule</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-              A Full Day of Impact
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {schedule.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-6 p-4 rounded-lg transition-all hover:bg-white/5"
-                style={{ borderLeft: '4px solid #E91E8C' }}
-              >
-                <span className="text-[#E91E8C] font-bold text-sm w-24 flex-shrink-0">{item.time}</span>
-                <span className="text-white">{item.event}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/schedule"
-              className="inline-block px-6 py-3 border-2 border-[#E91E8C] text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:bg-[#E91E8C] hover:text-white transition-all"
-            >
-              View Full Schedule
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-4 bg-white">
+      {/* Sponsorship Section */}
+      <section id="sponsors" className="py-20 px-4" style={{ backgroundColor: '#1a1a1a' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Testimonials</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] uppercase" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-              What Attendees Say
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Sponsorship</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
+              Partner With The Women Of Arizona
             </h2>
+            <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed mb-4">
+              The Arizona Women&apos;s Conference connects organizations directly with a powerful and engaged audience of decision-makers.
+            </p>
+            <p className="text-[#E91E8C] text-lg font-medium max-w-3xl mx-auto">
+              Women influence or control over 70% of household purchasing decisions and represent one of the fastest-growing segments of business ownership in Arizona.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { quote: "This conference changed my perspective on what's possible. I left with a clear action plan and amazing connections.", name: "Jennifer M.", title: "Small Business Owner" },
-              { quote: "The energy in the room was incredible. Every session provided actionable takeaways I'm still implementing today.", name: "Maria S.", title: "Entrepreneur" },
-              { quote: "Tiffany and the speakers delivered exactly what we needed to hear. No fluff, just real strategies that work.", name: "Ashley T.", title: "Consultant" },
-              { quote: "I've attended many conferences, but this one stands out. The community of women is supportive and inspiring.", name: "Rachel K.", title: "Startup Founder" }
-            ].map((testimonial, i) => (
-              <div key={i} className="p-8 rounded-lg bg-[#f9f9f9]">
-                <Quote className="w-10 h-10 text-[#E91E8C] mb-4" />
-                <p className="text-[#333] italic mb-6 leading-relaxed">{testimonial.quote}</p>
-                <p className="text-[#E91E8C] font-bold">{testimonial.name}</p>
-                <p className="text-[#666] text-sm">{testimonial.title}</p>
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 className="text-xl font-bold text-white uppercase mb-4" style={{ fontFamily: '"Acherus Bold", Montserrat, sans-serif' }}>
+                Why Partner With Us
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                Our sponsors are not passive advertisers — they are active participants in the conference experience through activations, education, and meaningful engagement.
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                We intentionally integrate partners into attendee interaction, creating genuine brand relationships rather than logo placement.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-white uppercase mb-4" style={{ fontFamily: '"Acherus Bold", Montserrat, sans-serif' }}>
+                Who Should Sponsor
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  'Banks & Financial Institutions',
+                  'Hospitals & Healthcare Systems',
+                  'Universities & Colleges',
+                  'Law Firms',
+                  'Insurance Companies',
+                  'Real Estate Groups',
+                  'Corporate Employers',
+                  'HR & Recruiting Firms',
+                  'Technology Companies'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-[#E91E8C] flex-shrink-0" />
+                    <span className="text-white/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Sponsor Logos - Larger Area */}
+          <div className="rounded-2xl p-10 mb-12 text-center" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <p className="text-white/40 text-xs uppercase tracking-widest mb-8">Current Sponsors</p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+              <div className="text-center">
+                <p className="text-xs uppercase tracking-wide text-[#E91E8C] mb-4">Title Sponsor</p>
+                <a
+                  href="https://dotheblankthing.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block cursor-pointer hover:opacity-80 transition-opacity"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://dtdtnation.com/wp-content/uploads/2022/01/DTDT_logo-1.svg"
+                    alt="DO THE DAMN THING"
+                    style={{ height: '60px' }}
+                  />
+                </a>
               </div>
-            ))}
+              <div className="hidden md:block w-px h-16 bg-white/20" />
+              <div className="text-center">
+                <p className="text-xs uppercase tracking-wide text-[#E91E8C] mb-4">Platinum Sponsor</p>
+                <a
+                  href="https://speedrun.adrata.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+                >
+                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-white text-2xl font-medium">Adrata</span>
+                </a>
+              </div>
+            </div>
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <p className="text-white/40 text-sm">Your logo here — sponsor spots are limited</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:hello@azwomensconference.com?subject=Sponsor%20Deck%20Request"
+              className="inline-block px-8 py-4 bg-[#E91E8C] text-white font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity text-center"
+            >
+              Request Sponsor Deck
+            </a>
+            <a
+              href="mailto:hello@azwomensconference.com?subject=Sponsorship%20Inquiry"
+              className="inline-block px-8 py-4 border-2 border-[#E91E8C] text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:bg-[#E91E8C] hover:text-white transition-all text-center"
+            >
+              Become a Sponsor
+            </a>
           </div>
         </div>
       </section>
 
       {/* Tickets Section */}
-      <section id="tickets" className="py-20 px-4" style={{ backgroundColor: '#1a1a1a' }}>
+      <section id="tickets" className="py-20 px-4" style={{ backgroundColor: '#101010' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-widest text-[#E91E8C] mb-4">Get Your Ticket</p>
@@ -499,21 +508,29 @@ export default function ArizonaWomensConferencePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#E91E8C' }}>
+      {/* Final CTA / Interest List */}
+      <section id="interest" className="py-20 px-4" style={{ backgroundColor: '#E91E8C' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6" style={{ fontFamily: '"Acherus Black", Montserrat, sans-serif' }}>
-            Your Transformation Starts Here
+            Decide What You Want More Of This Year.
           </h2>
-          <p className="text-white/80 text-lg mb-8">
-            May 2, 2026 • Phoenix, AZ • 9:00 AM - 5:00 PM
+          <p className="text-white/90 text-lg mb-10">
+            Join the interest list for early announcements, speaker releases, and registration access.
           </p>
-          <a
-            href="#tickets"
-            className="inline-block px-10 py-4 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
-          >
-            Get Your Ticket Now
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:hello@azwomensconference.com?subject=Interest%20List"
+              className="inline-block px-10 py-4 bg-white text-[#E91E8C] font-bold text-sm uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+            >
+              Join the Interest List
+            </a>
+            <a
+              href="#sponsors"
+              className="inline-block px-10 py-4 border-2 border-white text-white font-bold text-sm uppercase tracking-wide rounded hover:bg-white/10 transition-colors"
+            >
+              Sponsor the Conference
+            </a>
+          </div>
         </div>
       </section>
 

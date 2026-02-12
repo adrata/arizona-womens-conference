@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Arizona Women's Conference | May 2, 2026",
-  description: "Join hundreds of ambitious women for a full day of inspiration, education, and connection. May 2, 2026 in Phoenix, AZ.",
+  description: "A statewide gathering of women leaders, professionals, founders, and builders. May 2, 2026 in Phoenix, AZ.",
   openGraph: {
     title: "Arizona Women's Conference",
-    description: "Empower. Connect. Transform. Join us May 2, 2026 in Phoenix, AZ.",
+    description: "Connection. Advancement. Opportunity. Join us May 2, 2026 in Phoenix, AZ.",
   },
 };
 

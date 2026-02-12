@@ -13,8 +13,8 @@ export default function Footer() {
               <p className="text-[#E91E8C] text-sm uppercase tracking-wider">Conference</p>
             </div>
             <p className="text-white/60 mb-6 max-w-md">
-              Arizona&apos;s premier conference for women in business. Join hundreds of ambitious women
-              for a transformative day of inspiration, education, and connection.
+              A statewide gathering of women leaders, professionals, founders, and builders.
+              Connection, advancement, and opportunity.
             </p>
             <div className="pt-4 border-t border-white/10">
               <p className="text-white/40 text-xs uppercase tracking-wide mb-3">Sponsors</p>
